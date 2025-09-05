@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/about/alova",
+    "pages/about/i18n",
+    "pages/about/vue-query",
+    "pages/login/login",
+    "pages/login/register",
+    "pages/me/me"
+  ],
+  "subPackages": [
+    {
+      "root": "pages-sub",
+      "pages": [
+        "demo/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationStyle": "default",
+    "navigationBarTitleText": "unibest",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#018d71",
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "Home",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "About",
+        "pagePath": "pages/about/about"
+      },
+      {
+        "text": "Me",
+        "pagePath": "pages/me/me"
+      }
+    ]
+  },
+  "usingComponents": {
+    "global-ku-root": "/App.ku",
+    "layout-default-uni": "/layouts/default"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-icons": "../uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "wd-icon": "../node-modules/wot-design-uni/components/wd-icon/wd-icon"
+  }
+}

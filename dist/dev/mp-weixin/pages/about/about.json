@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "About",
+  "usingComponents": {
+    "request-comp": "./components/request",
+    "v-bind-css": "./components/VBindCss",
+    "i18n-comp": "./i18n"
+  }
+}

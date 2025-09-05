@@ -1,0 +1,1 @@
+<wd-config-provider wx:if="{{c}}" u-s="{{['d']}}" u-i="e25e697e-0" bind:__l="__l" u-p="{{c}}"><view class="hidden text-center">{{a}}，这里可以配置全局的东西 </view><slot/><fg-tabbar wx:if="{{b}}" u-i="e25e697e-1,e25e697e-0" bind:__l="__l"/><wd-toast u-i="e25e697e-2,e25e697e-0" bind:__l="__l"/><wd-message-box u-i="e25e697e-3,e25e697e-0" bind:__l="__l"/></wd-config-provider>
