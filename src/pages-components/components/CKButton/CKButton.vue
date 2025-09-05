@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import type { CKButtonType, CKComponentSize } from '../../types'
+<script setup lang="ts">
 import { computed } from 'vue'
+import type { CKButtonType, CKComponentSize } from '../../types'
 
 // 组件 Props
 interface Props {
@@ -26,12 +27,12 @@ const props = withDefaults(defineProps<Props>(), {
   round: false,
 })
 
-const emit = defineEmits<Emits>()
-
 // 组件 Emits
-interface Emits {
+type Emits = {
   click: [event: Event]
 }
+
+const emit = defineEmits<Emits>()
 
 // 计算属性
 const buttonType = computed(() => {

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { CKInputType, CKValidationRule } from '../../types'
+<script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { formatInputValue, getDefaultRules, validateInput } from '../../utils/validation'
+import type { CKInputType, CKValidationRule } from '../../types'
 
 // 组件 Props
 interface Props {
@@ -32,10 +33,8 @@ const props = withDefaults(defineProps<Props>(), {
   validateOnInput: false,
 })
 
-const emit = defineEmits<Emits>()
-
 // 组件 Emits
-interface Emits {
+type Emits = {
   'update:modelValue': [value: any]
   'blur': [value: any]
   'focus': [value: any]
@@ -43,6 +42,8 @@ interface Emits {
   'clear': []
   'validation-change': [field: string, isValid: boolean, message?: string]
 }
+
+const emit = defineEmits<Emits>()
 
 // 内部状态
 const internalValue = ref<string>('')

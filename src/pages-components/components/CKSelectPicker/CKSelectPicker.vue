@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { CKOption, CKValidationRule } from '../../types'
+<script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { getDefaultRules, validateInput } from '../../utils/validation'
+import type { CKOption, CKValidationRule } from '../../types'
 
 // 组件 Props
 interface Props {
@@ -33,16 +34,16 @@ const props = withDefaults(defineProps<Props>(), {
   multiple: false,
 })
 
-const emit = defineEmits<Emits>()
-
 // 组件 Emits
-interface Emits {
+type Emits = {
   'update:modelValue': [value: any]
   'change': [value: any, option?: CKOption | CKOption[]]
   'confirm': [value: any, option?: CKOption | CKOption[]]
   'cancel': []
   'validation-change': [field: string, isValid: boolean, message?: string]
 }
+
+const emit = defineEmits<Emits>()
 
 // 内部状态
 const internalValue = ref<any>()

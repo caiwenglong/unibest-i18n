@@ -1,11 +1,12 @@
 <script setup lang="ts">
+<script setup lang="ts">
+import { computed, nextTick, reactive, ref, watch } from 'vue'
 import type {
   CKFormConfig,
   CKFormInstance,
   CKFormItem,
   CKOption,
 } from '../../types'
-import { computed, nextTick, reactive, ref, watch } from 'vue'
 
 // 导入子组件（通过 EasyComp 自动注册）
 // CK-Input, CK-Textarea, CK-SelectPicker, CK-Button 会自动注册
@@ -28,16 +29,16 @@ const props = withDefaults(defineProps<Props>(), {
   submitLoading: false,
 })
 
-const emit = defineEmits<Emits>()
-
 // 组件 Emits
-interface Emits {
+type Emits = {
   'update:modelValue': [value: Record<string, any>]
   'submit-form': [data: Record<string, any>]
   'field-change': [field: string, value: any, data: Record<string, any>]
   'validation-error': [field: string, error: string]
   'validate': [field: string, isValid: boolean, message?: string]
 }
+
+const emit = defineEmits<Emits>()
 
 // 内部状态
 const formRef = ref()
