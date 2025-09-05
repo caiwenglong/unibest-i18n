@@ -87,6 +87,8 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "type-check": "vue-tsc --noEmit",
     "openapi-ts-request": "openapi-ts",
+    "generate-enum-proxy": "node scripts/generate-enum-proxy.cjs",
+    "generate-enum-proxy:watch": "node scripts/generate-enum-proxy.cjs --watch",
     "prepare": "git init && husky",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
